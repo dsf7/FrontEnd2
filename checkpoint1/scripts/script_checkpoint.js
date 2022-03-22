@@ -1,23 +1,12 @@
-let nomeLugar = document.getElementById('nomeLugar');
-let textoLugar = document.getElementById('textoLugar');
-let linkImagem = document.getElementById('linkImagem');
-
-let checkbox = document.getElementById('checkbox')
 
 let botaoCriar = document.getElementById('criar');
 
-botaoCriar.addEventListener('click', function(evento) {
-    evento.preventDefault(); 
-    
-    console.log(nomeLugar.value);
-    console.log(textoLugar.value);
-    console.log(linkImagem.value);
-
-    console.log(checkbox.value);
-    console.log(checkbox.checked);
-
+function criar () {
+    let nomeLugar = document.getElementById('nomeLugar').value;
+    let textoLugar = document.getElementById('textoLugar').value;
+    let linkImagem = document.getElementById('linkImagem').value;
+    let checkbox = document.getElementById('checkbox');
     let cardsPai = document.getElementById("cardsPai");
-
     let newCard = `<div class="card col-{breakpoint}-auto col-sm-4 col-12">
     <img src="${linkImagem}" class="card-img-top" alt="...">
     <div class="card-body">
@@ -30,4 +19,17 @@ botaoCriar.addEventListener('click', function(evento) {
     let novoNo = document.createElement('div');
     novoNo.innerHTML = newCard;
     cardsPai.appendChild(novoNo);
+}
+
+botaoCriar.addEventListener('click', function(evento) {
+    evento.preventDefault(); 
+    
+    console.log(nomeLugar.value);
+    console.log(textoLugar.value);
+    console.log(linkImagem.value);
+
+    console.log(checkbox.checked);
+
+    criar();
 } )
+
