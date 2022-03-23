@@ -1,5 +1,6 @@
-
 let botaoCriar = document.getElementById('criar');
+
+
 
 function criar () {
     let nomeLugar = document.getElementById('nomeLugar').value;
