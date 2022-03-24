@@ -29,7 +29,7 @@ function criar() {
   buttonInfo.innerHTML = "Saiba mais sobre esse lugar.";
   buttonInfo.setAttribute(
     "href",
-    `https://www.google.com/search?q=+${nomeLugar}`
+    `https://www.google.com/search?q=sobre+${nomeLugar}`
   );
   buttonInfo.setAttribute("target", "_blank");
   novoCard.classList.add("card-body");
