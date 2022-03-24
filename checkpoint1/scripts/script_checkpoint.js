@@ -4,7 +4,7 @@ function criar() {
   let nomeLugar = document.getElementById("nomeLugar").value;
   let textoLugar = document.getElementById("textoLugar").value;
   let linkImagem = document.getElementById("linkImagem").value;
-  let checkbox = document.getElementById("checkbox");
+  // let checkbox = document.getElementById("checkbox");
   let cardsPai = document.querySelector("div");
   let novoNo = document.createElement("div");
   let novoCard = document.createElement("div");
@@ -27,13 +27,19 @@ function criar() {
   buttonInfo.classList.add("btn");
   buttonInfo.classList.add("btn-primary");
   buttonInfo.innerHTML = "Saiba mais sobre esse lugar.";
+  buttonInfo.setAttribute(
+    "href",
+    `https://www.google.com/search?q=+${nomeLugar}`
+  );
+  buttonInfo.setAttribute("target", "_blank");
   novoCard.classList.add("card-body");
   novoNo.appendChild(newImg);
+  novoCard.appendChild(imgParagraph);
   novoCard.appendChild(newTitle);
   novoCard.appendChild(newParagraph);
-  novoCard.appendChild(imgParagraph);
-  novoCard.appendChild(buttonInfo);
+
   novoNo.appendChild(novoCard);
+  novoNo.append(buttonInfo);
   novoNo.classList.add("card");
   novoNo.classList.add("col-{breakpoint}-auto");
   novoNo.classList.add("col-sm-4");
@@ -50,7 +56,7 @@ botaoCriar.addEventListener("click", function (evento) {
   console.log(textoLugar.value);
   console.log(linkImagem.value);
 
-  console.log(checkbox.checked);
+  // console.log(checkbox.checked);
 
   criar();
 });

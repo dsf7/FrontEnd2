@@ -19,7 +19,6 @@
   color: rgb(227, 91, 41);
 }
 
-
 .placeholder {
   height: 20vh;
   align-items: center;
@@ -30,7 +29,7 @@
 }
 
 .formulario {
-  margin-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .form-check {
@@ -42,7 +41,6 @@
   height: 25vh;
 }
 
-
 .btn-primary {
   margin: 20px;
 }
@@ -50,8 +48,6 @@
 .container-fluid {
   background-color: rgba(80, 208, 250, 0.735);
 }
-
-
 
 body {
   margin: 50px;
